@@ -11,7 +11,7 @@ if (isProduction) {
   pool = new Pool({
     user: 'postgres',
     host: 'localhost',
-    database: 'd7qtraoo3tsfjb',
+    database: 'dss10dsink49n',
     password: '0000',
     port: '5432',
   });
