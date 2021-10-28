@@ -14,7 +14,7 @@ const Category = class Category {
     //get all categories
     static async fetchALL() {
         try {
-            let results = await db.query('SELECT * from car');
+            let results = await db.query('SELECT * FROM car');
             return results.rows;
         } catch (e) {
             console.log('error', e);
