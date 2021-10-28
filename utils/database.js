@@ -3,6 +3,7 @@ const connectionString = 'postgres://hqxqcyvowepdnv:121d1b30c0a13b2de071baae70e9
 
 const pool = new Pool({
     connectionString: connectionString,
+    ssl: { rejectUnauthorized: false }
 })
 
 module.exports = pool;
