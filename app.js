@@ -4,9 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var apiRouter = require('./routes/api');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const apiRouter = require('./routes/api');
 
 var app = express();
 const cors = require('cors');
@@ -42,7 +42,7 @@ app.use(function (err, req, res, next) {
 
 app.use(
   cors({
-    origin: ['https://midterm-16.herokuapp.com']
+    origin: ['https://midterm-16.herokuapp.com/']
   })
 );
 module.exports = app; 

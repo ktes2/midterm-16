@@ -8,4 +8,4 @@ exports.getCategories = async (req, res) => {
     } catch (err) {
         console.log('crown2Controller getCategories', err);
     }
-}
+};
