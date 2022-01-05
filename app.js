@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const apiRouter = require('./routes/api');
 
+const crudRouter = require('./routes/crud');
+
 var app = express();
 const cors = require('cors');
 // view engine setup
@@ -23,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', cors(), apiRouter);
+app.use('/crud', cors(), crudRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -42,7 +45,7 @@ app.use(function (err, req, res, next) {
 
 app.use(
   cors({
-    origin: ['https://midterm-16.herokuapp.com/']
+    origin: ['https://midterm-16.herokuapp.com/'],
   })
 );
-module.exports = app; 
+module.exports = app;
